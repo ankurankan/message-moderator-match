@@ -1,0 +1,16 @@
+<html>
+<body>
+	{{ report.slug }}
+    <br/>
+
+	<button action='' name="action" type="submit" value="1">Update</button>
+	<button action='' name="action" type="submit" value="2">Archive</button>
+	<button action='' name="action" type="submit" value="3">3</button>
+	<button action='' name="action" type="submit" value="4">4</button>
+<form action="{% url moderator_view %}" method="post">{% csrf_token %}
+{{ report_form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>
